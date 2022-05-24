@@ -4,12 +4,11 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import blue from '@mui/material/colors/blue';
-import { Header, Footer } from './Comps/Components.jsx';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-
+import { Header, Footer } from './Comps/Components.jsx';
+import Banner from './Comps/Banner.jsx';
+import Content from './Comps/Content.jsx';
 
 function App() {
 
@@ -24,18 +23,16 @@ function App() {
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <Box sx={{ bgcolor: 'background.default', color: 'text.primary', minHeight: '100vh' }}>
+      <Box
+        sx={{
+          bgcolor: 'background.default',
+          color: 'text.primary',
+          minHeight: '100vh'
+        }}>
         <Header />
-        <Box sx={{ height: '100vh', bgcolor: 'primary.dark', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <Typography variant="h5">
-            BANNER
-          </Typography>
-        </Box>
-        <Container maxWidth="lg">
-          <Typography sx={{ p: 3, borderBottom: 2 }} variant="h6">My Apps</Typography>
-          <Box sx={{ p: 3 }}>
-            <Button href="/budgetAccountant" variant="contained">Budget Tracker</Button>
-          </Box>
+        <Banner />
+        <Container maxWidth="md">
+          <Content />
         </Container>
         <Footer />
       </Box>
