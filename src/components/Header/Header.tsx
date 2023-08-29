@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Container from '@mui/material/Container';
+import Avatar from '@mui/material/Avatar';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 import MenuIcon from '@mui/icons-material/Menu';
@@ -12,6 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { sxHeader } from '../../extras/styles';
 import Drawer from './Drawer';
 import { useState, ReactElement } from 'react';
+import profileImage from '../../static/profile.jpg';
 
 
 
@@ -49,6 +51,10 @@ export default function Header(): ReactElement {
               component="div"
               sx={sxHeader.logo}
             >
+              <Avatar
+                src={profileImage}
+              />
+
               <b>Mihdi Fynn</b>
             </Typography>
 

@@ -11,7 +11,12 @@ export const sxParent: Readonly<styles> = {
 export const sxHeader: Record<string, Readonly<styles>> = {
     logo: {
         flexGrow: 1,
-        color: 'primary.main'
+        color: 'primary.main',
+        display: 'flex',
+        alignItems: 'center',
+        '& b': {
+            ml: 1
+        }
     },
     largeItems: {
         display: {
@@ -67,5 +72,40 @@ export const sxFooter: Record<string, Readonly<styles>> = {
     parent: {
         p: 1,
         textAlign: 'center'
+    }
+}
+
+export const sxWork: Record<string, Readonly<styles>> = {
+    title: {
+        p: 2,
+        borderBottom: 5,
+        borderColor: 'primary.main' 
+    },
+    content: {
+        display: 'flex',
+        flexWrap: 'wrap'
+    }
+};
+
+export const sxWorkCard: Record<string, Readonly<styles>> = {
+    card: {
+        m: 1,
+        width: {
+            xs: '100%',
+            sm: '45%',
+        },
+        borderRadius: 2
+    },
+    status: {
+        color: 'text.secondary',
+        ml: 1
+    },
+    chip: {
+        m: 0.25
+    },
+    title: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start'
     }
 }

@@ -42,7 +42,7 @@ export default function App(): ReactElement {
 
         <Banner />
 
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
           <Projects />
 
           <About />
