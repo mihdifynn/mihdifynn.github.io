@@ -79,7 +79,8 @@ export const sxWork: Record<string, Readonly<styles>> = {
     title: {
         p: 2,
         borderBottom: 5,
-        borderColor: 'primary.main' 
+        borderColor: 'primary.main',
+        mb: 1 
     },
     content: {
         display: 'flex',
@@ -107,5 +108,19 @@ export const sxWorkCard: Record<string, Readonly<styles>> = {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'flex-start'
+    }
+}
+
+export const sxContact: Record<string, Readonly<styles>> = {
+    title: sxWork.title,
+    iconBox: {
+        display: 'flex',
+        mt: 1,
+        alignItems: 'center'
+    },
+    iconButton: {
+        borderRadius: 2,
+        p: 0.5,
+        mr: 0.5,
     }
 }

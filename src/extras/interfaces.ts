@@ -22,5 +22,7 @@ export interface styles {
     m?: number;
     mb?: number;
     borderRadius?: number;
-    flexWrap?: string
+    flexWrap?: string;
+    mt?: number;
+    border?: number;
 }
