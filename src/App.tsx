@@ -15,16 +15,11 @@ import Projects from './components/Projects';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import { ReactElement } from 'react';
+import { ReactElement, useEffect } from 'react';
 
 
 
 export default function App(): ReactElement {
-
-  // const test = (): number => {
-  //   console.log('string')
-  //   return 1
-  // }
 
   const darkTheme = createTheme({
     palette: {
@@ -35,6 +30,21 @@ export default function App(): ReactElement {
     }
   })
 
+  useEffect(() => {
+    const sections: NodeListOf<HTMLElement> = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver((entries): void => {
+      entries.forEach((entry): void => {
+        entry.target.classList.toggle('show', entry.isIntersecting);
+      })
+    }, {
+      threshold: 0.5
+    })
+    sections.forEach((section: HTMLElement): void => {
+      observer.observe(section);
+    })
+  }, [])
+
   return (
     <ThemeProvider theme={darkTheme}>
       <Box sx={sxParent}>
@@ -42,12 +52,16 @@ export default function App(): ReactElement {
 
         <Banner />
 
-        <Container maxWidth="md">
+        <Container  maxWidth="md">
           <Projects />
 
-          <About />
+          <section>
+            <About />
+          </section>
 
-          <Contact />
+          <section>
+            <Contact />
+          </section>
         </Container>
 
         <Footer />

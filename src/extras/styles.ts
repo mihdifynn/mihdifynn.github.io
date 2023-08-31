@@ -2,6 +2,7 @@ import { styles } from './interfaces';
 import bannerImage from '../static/banner.jpg';
 
 
+
 export const sxParent: Readonly<styles> = {
     minHeight: '100vh',
     bgcolor: 'background.default',
@@ -80,7 +81,7 @@ export const sxWork: Record<string, Readonly<styles>> = {
         p: 2,
         borderBottom: 5,
         borderColor: 'primary.main',
-        mb: 1 
+        my: 2
     },
     content: {
         display: 'flex',
@@ -123,4 +124,8 @@ export const sxContact: Record<string, Readonly<styles>> = {
         p: 0.5,
         mr: 0.5,
     }
+}
+
+export const sxAbout: Record<string, Readonly<styles>> = {
+    title: sxWork.title,
 }

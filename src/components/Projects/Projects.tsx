@@ -35,19 +35,24 @@ export default function Projects(): ReactElement {
     <Box
       id="work"
     >
-      <Typography
-        variant="h5"
-        sx={sxWork.title}
-      >
-        <b>My Projects</b>
-      </Typography>
+      <section>
+        <Typography
+          variant="h5"
+          sx={sxWork.title}
+        >
+          <b>My Projects</b>
+        </Typography>
+      </section>
 
-      <Box sx={sxWork.content}>
+      <Box
+        sx={sxWork.content}
+        component="section"
+      >
       { workList.map((workObject: workTypes, i: number): ReactElement => (
-          <WorkCard
-            key={i}
-            {...workObject}
-          />
+            <WorkCard
+              key={i}
+              {...workObject}
+            />
         )) }
       </Box>
     </Box>

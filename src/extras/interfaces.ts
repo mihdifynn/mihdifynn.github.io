@@ -25,4 +25,6 @@ export interface styles {
     flexWrap?: string;
     mt?: number;
     border?: number;
+    opacity?: number;
+    '&.show'?:Record<string, any>   
 }

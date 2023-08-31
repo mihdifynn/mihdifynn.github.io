@@ -4,4 +4,16 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
+}
+
+section {
+  opacity: 0;
+  transition: 1s;
+  transform: translateX(-100px);
+}
+
+section.show {
+  opacity: 1;
+  transform: translateX(0);
 }

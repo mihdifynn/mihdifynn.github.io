@@ -10,7 +10,7 @@ export default function Banner(): ReactElement {
 
   return (
     <Box sx={sxBanner.parent}>
-      <div>
+      <section>
         <Typography
           variant="body2"
           color="text.secondary"
@@ -24,7 +24,14 @@ export default function Banner(): ReactElement {
         >
           <b>Mihdi Fynn</b>
         </Typography>
-      </div>
+
+        <Typography
+          variant="body2"
+          color="text.secondary"
+        >
+          <b>a full stack web developer</b>
+        </Typography>
+      </section>
     </Box>
   )
 }
